@@ -56,7 +56,7 @@ cat(rmarkdown::metadata$date)
 - 09\. Session: 14C Calibration II | 20/11/19
 - 10\. Session: GIS I | 27/11/19
 - 11\. Session: GIS II | 04/12/19
-- 12\. Session: Digital (Field) Recording | 11/12/19
+- 12\. Session: Digital Documentation | 11/12/19
 ]
 
 .footnote[

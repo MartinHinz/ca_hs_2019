@@ -57,23 +57,106 @@ cat(rmarkdown::metadata$date)
 library(magrittr)
 library(kableExtra)
 schedule <- c(
-  "18/09/19", "Introduction", "",
-  "25/09/19", "General Aids", "",
-  "02/10/19", "Data Bases I", "3",
-  "09/10/19", "Data Bases II", "4",
-  "23/10/19", "Visualisation I", "5",
-  "30/10/19", "Visualisation II","7",
-  "06/11/19", "Basic Statistics", "5, 6, 14",
-  "13/11/19", "14C Calibration I", "6",
-  "20/11/19", "14C Calibration II", "8",
-  "27/11/19", "GIS I", "11",
-  "04/12/19", "GIS II", "13",
-  "11/12/19", "Digital (Field) Recording", ""
+  "18/09/19", "Introduction", "Your Brain",
+  "25/09/19", "General Aids", "Libre Office Writer, Zotero",
+  "02/10/19", "Data Bases I", "Libre Office Base",
+  "09/10/19", "Data Bases II", "Libre Office Base",
+  "23/10/19", "Visualisation I", "Libre Office Calc",
+  "30/10/19", "Visualisation II","Libre Office Calc",
+  "06/11/19", "Basic Statistics", "Libre Office Calc",
+  "13/11/19", "14C Calibration I", "OxCal/Chronomodel",
+  "20/11/19", "14C Calibration II", "OxCal/Chronomodel",
+  "27/11/19", "GIS I", "QGIS",
+  "04/12/19", "GIS II", "QGIS",
+  "11/12/19", "Digital Documentation", "Your Brain"
 )
 schedule <- as.data.frame(matrix(schedule,ncol=3, byrow = T))
-colnames(schedule) <- c("date", "topic", "chapt. Shennan")
+colnames(schedule) <- c("date", "topic", "Software")
 knitr::kable(schedule)  %>%
   kable_styling(bootstrap_options = c("striped", "hover"),
                 latex_options = "striped",
                 full_width = T)
 ```
+
+---
+
+## Software in this course
+
+- free (and most of the time) open source software
+- most basic software
+
+.small[
+### Libre Office
+
+- free and open source (FOSS) office package
+- most commands and procedures similar to 'the other' office package
+
+### OxCal
+
+- free, but not open source
+- quasi standard in archaeology
+
+### Chronomodel
+
+- FOSS alternative to OxCal
+- (have to figure out if we can use it instead)
+
+### QGIS
+
+- FOSS GIS package
+- General ideas and concepts are transferable to 'the other' GIS software
+]
+
+---
+
+## What is computational archaeology
+
+### Topics<sup>*</sup>
+
+1. The use of *digital data* in archaeological research.
+2. The general *use of computers* in archaeological research.
+3. The use of *computational algorithms to fill gaps in archaeological data* in ways that can’t be done with traditional techniques.
+4. *Data mining* and *multidimensional analyses* of archaeological data.
+5. The use of *simulation models and artificial intelligence* to understand the processes and dynamics of past societies.
+6. The use of *computer visualizations* to create immersive *virtual* experiences of archaeological sites and materials
+
+.footnote[[*] from http://isaacullah.github.io/What-is-Computational-Archaeology/]
+
+---
+
+## What is computational archaeology
+
+### Fields<sup>*</sup>
+
+1. **GIS and geospatial data analysis.**
+2. **Digital imagery and photogrammetry.**
+3. **Statistical computing and quantitative analysis.**
+4. **Data visualization.**
+5. Agent Based Modeling and simulation.
+6. 3D modeling, virtual reality, and augmented reality.
+7. Video gaming and digital animation.
+
+We will touch the **highlighted** subjects.
+
+.footnote[[*] from http://isaacullah.github.io/What-is-Computational-Archaeology/]
+
+---
+
+## Organisations that are related to Computational Archaeology
+
+[Very subjective list]
+
+* [CAA](https://caa-international.org)
+* [ISAAK](https://isaakiel.github.io/)
+* [ACA](http://aca.archaeological.science/)
+
+---
+
+## Other terms
+
+* Cyber Archaeology
+* Digital Archaeology
+* Archaeoinformatics
+* Digital Humanities
+
+---
