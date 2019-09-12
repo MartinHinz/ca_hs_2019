@@ -1,0 +1,66 @@
+---
+title: "Computational Archaeology"
+author: "Martin Hinz"
+date: "HS 2019"
+institute: "Institut für Archäologische Wissenschaften, Universität Bern"
+output:
+  xaringan::moon_reader:
+    keep_md: true
+    chakra: libs/remark-latest.min.js
+    css: ["libs/default.css", "libs/default-fonts.css", "libs/customize.css"]
+    lib_dir: libs
+    seal: false
+    nature:
+      beforeInit: "libs/macros.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      fig_caption: yes
+---
+class: title-slide
+```{r, echo = FALSE}
+# https://stackoverflow.com/questions/25646333/code-chunk-font-size-in-rmarkdown-with-knitr-and-latex
+def.chunk.hook  <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(chunk = function(x, options) {
+  x <- def.chunk.hook(x, options)
+  ifelse(options$size != "normalsize", paste0("\\", options$size,"\n\n", x, "\n\n \\normalsize"), x)
+})
+```
+
+```{r, echo = FALSE, results="asis"}
+cat('## ', rmarkdown::metadata$title)
+```
+.small[
+```{r, echo = FALSE, results="asis"}
+cat('#### ', rmarkdown::metadata$author)
+```
+
+```{r, echo = FALSE, results="asis"}
+cat(rmarkdown::metadata$institute)
+```
+
+```{r, echo = FALSE, results="asis"}
+cat(rmarkdown::metadata$date)
+```
+
+### Presentations
+
+- 01\. Session: Introduction | 18/09/19
+- 02\. Session: General Aids | 25/09/19
+- 03\. Session: Data Bases I | 02/10/19
+- 04\. Session: Data Bases II | 09/10/19
+- 05\. Session: Visualisation I | 23/10/19
+- 06\. Session: Visualisation II | 30/10/19
+- 07\. Session: Basic Statistics | 06/11/19
+- 08\. Session: 14C Calibration I | 13/11/19
+- 09\. Session: 14C Calibration II | 20/11/19
+- 10\. Session: GIS I | 27/11/19
+- 11\. Session: GIS II | 04/12/19
+- 12\. Session: Digital (Field) Recording | 04/12/19
+]
+
+.footnote[
+.small[
+<sup>\*</sup> You can find the **code of this presentations** at the [github repository](https://github.com/MartinHinz/ca_hs_2019). You might also like to check out the **video tutorials** in [english] that will be made available.
+]
+]
