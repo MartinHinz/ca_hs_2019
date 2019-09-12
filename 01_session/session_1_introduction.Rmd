@@ -51,6 +51,29 @@ cat(rmarkdown::metadata$date)
 
 ---
 
-## Synopsis
+## Schedule
 
-Hello World
+```{r echo=FALSE}
+library(magrittr)
+library(kableExtra)
+schedule <- c(
+  "18/09/19", "Introduction", "",
+  "25/09/19", "General Aids", "",
+  "02/10/19", "Data Bases I", "3",
+  "09/10/19", "Data Bases II", "4",
+  "23/10/19", "Visualisation I", "5",
+  "30/10/19", "Visualisation II","7",
+  "06/11/19", "Basic Statistics", "5, 6, 14",
+  "13/11/19", "14C Calibration I", "6",
+  "20/11/19", "14C Calibration II", "8",
+  "27/11/19", "GIS I", "11",
+  "04/12/19", "GIS II", "13",
+  "11/12/19", "Digital (Field) Recording", ""
+)
+schedule <- as.data.frame(matrix(schedule,ncol=3, byrow = T))
+colnames(schedule) <- c("date", "topic", "chapt. Shennan")
+knitr::kable(schedule)  %>%
+  kable_styling(bootstrap_options = c("striped", "hover"),
+                latex_options = "striped",
+                full_width = T)
+```
