@@ -50,7 +50,70 @@ cat(rmarkdown::metadata$date)
 ```
 
 ---
+## What is not computational archaeology
+### in relation to our course
 
+.center[![:width 90%](../images/01_session/maxresdefault.jpg)]
+
+---
+## What is computational archaeology
+
+### Topics<sup>*</sup>
+
+.pull-left[
+1. The use of **digital data** in archaeological research.
+2. The general **use of computers** in archaeological research.
+3. The use of **computational algorithms to fill gaps in archaeological data** in ways that can’t be done with traditional techniques.
+4. **Data mining** and **multidimensional analyses** of archaeological data.
+5. The use of **simulation models and artificial intelligence** to understand the processes and dynamics of past societies.
+6. The use of **computer visualizations** to create immersive **virtual** experiences of archaeological sites and materials
+
+.footnote[[*] from http://isaacullah.github.io/What-is-Computational-Archaeology/]
+]
+.pull-right[
+![:width 65%](../images/01_session/A1-hppo-xkL.jpg)
+]
+---
+
+## What is computational archaeology
+
+### Fields<sup>*</sup>
+
+.pull-left[
+1. **GIS and geospatial data analysis.**
+2. **Digital imagery and photogrammetry.**
+3. **Statistical computing and quantitative analysis.**
+4. **Data visualization.**
+5. Agent Based Modeling and simulation.
+6. 3D modeling, virtual reality, and augmented reality.
+7. Video gaming and digital animation.
+
+We will touch the **highlighted** subjects.
+
+.footnote[[*] from http://isaacullah.github.io/What-is-Computational-Archaeology/]
+]
+
+.pull-right[
+![](../images/01_session/2001_Virtuelle_Archaeologie_011.jpg)
+.caption[Sorry, no fancy 3D Modelling (this time)]
+]
+---
+
+## Other terms
+
+.pull-left[
+* Cyber Archaeology
+* Digital Archaeology
+* Archaeoinformatics
+* Digital Humanities
+
+![](../images/01_session/Digital Humanities_1.jpg)
+]
+
+.pull-right[
+![](../images/01_session/IT_Buzzword_BINGO.jpg)
+]
+---
 ## Schedule
 
 ```{r echo=FALSE}
@@ -58,12 +121,12 @@ library(magrittr)
 library(kableExtra)
 schedule <- c(
   "18/09/19", "Introduction", "Your Brain",
-  "25/09/19", "General Aids", "Libre Office Writer, Zotero",
+  "25/09/19", "Your Compute as research tools", "Libre Office Writer, Zotero",
   "02/10/19", "Data Bases I", "Libre Office Base",
   "09/10/19", "Data Bases II", "Libre Office Base",
   "23/10/19", "Visualisation I", "Libre Office Calc",
-  "30/10/19", "Visualisation II","Libre Office Calc",
-  "06/11/19", "Basic Statistics", "Libre Office Calc",
+  "30/10/19", "Visualisation II","Libre Office Calc, TOSCA",
+  "06/11/19", "Basic Statistics / Hypothese testing", "Libre Office Calc",
   "13/11/19", "14C Calibration I", "OxCal/Chronomodel",
   "20/11/19", "14C Calibration II", "OxCal/Chronomodel",
   "27/11/19", "GIS I", "QGIS",
@@ -79,6 +142,349 @@ knitr::kable(schedule)  %>%
 ```
 
 ---
+## Computers as research tools
+
+### What is it
+
+- review literature
+- collect data
+- structure information
+- process images
+- write a paper
+
+.center[
+![:width 40%](../images/01_session/overlay.jpeg) vs. ![:width 20%](../images/01_session/scientist_PNG30.png)
+]
+
+---
+## Computers as research tools
+
+### only session
+
+.pull-left[
+- Types of Digital Data
+- Working with Digital Data
+- Software suggestions
+- Using citation software
+
+![:width 80%](../images/01_session/joy.jpg)
+]
+
+.pull-right[
+- structuring your research environment
+- working with open and sustainable formats
+- glimpse on
+  - markdown
+  - latex
+  - version control
+
+![](../images/01_session/FortranCardPROJ039.agr.jpg)
+]
+
+---
+## Databases
+
+### What is it
+
+.pull-left[
+
+>  A database is an organized collection of data, generally stored and accessed electronically from a computer system. - Wikipedia
+
+- on one computer -> for personal data organisation
+  - Libre Office, MS Access, Sqlite
+  - single file
+- server - client, often web based
+  - PostgreSQL, MySQL
+  - data exchange and collaborative data management
+]
+
+.pull-right[
+
+Relates different information on different abstraction levels eg.:
+
+1 site <-> multiple artefacts
+
+```{r echo=FALSE, message=F}
+library(DiagrammeR)
+my_dia <- DiagrammeR::grViz("
+digraph models_diagram {
+    rankdir='LR';
+    graph[overlap=false, splines=true]
+    'site' [shape=record, label='{\\
+      site|name :string\\l\\
+      lat :float\\l\\
+      lng :float\\l\\
+    }']
+    
+    'artefact' [shape=record, label='{artefact|\\
+      material :string\\l\\
+      weight :string\\l\\
+    }']
+    
+
+    'site' -> 'artefact' [arrowtail=odot, arrowhead=crow, dir=both, label='belongs_to']
+}", height=100, width=400)
+
+my_dia
+```
+]
+
+---
+## Databases
+
+### First section
+
+.pull-left[
+Create a simple data base
+
+- site information
+- artefact information
+
+- lookup tables
+
+![:width 50%](../images/01_session/eea9e4b5-ad2b-4e12-b828-d64f586de260.gif)
+
+]
+
+.pull-right[
+Topics
+
+- data normalisation
+- table design
+- variable types
+- form creation
+
+![:width 50%](../images/01_session/1NF.gif)
+]
+
+---
+## Databases
+
+### Second section
+
+.pull-left[
+Retrieve informations from the data base
+
+- queries
+- joining tables
+- exporting data
+
+.center[![:width 75%](../images/01_session/ext.jpeg)]
+]
+
+.pull-right[
+Topics
+
+- query logic
+- sql
+- csv
+
+![:width 25%](../images/01_session/1263920.svg)
+]
+---
+## Visualisation
+
+### What is it
+> Data visualization is the graphic representation of data. It involves producing images that communicate relationships among the represented data to viewers of the images. - wikipedia
+
+- 'statistical' charts like barcharts, pie charts, scatterplots...
+- humans are visual animals
+- explore data / find structures
+- visualise multidimensional relationships
+
+.center[
+![:width 40%](../images/01_session/Minard.png)
+![:width 34%](../images/01_session/1_6XAf0oi88MRCBbCd_cHcew.png)]
+
+---
+## Visualisation
+
+### First section
+
+.pull-left[
+- prepare your data for visualisation
+- Basic visualisation using spreadsheat software (LibreOffice Calc)
+- export for later (re)use
+
+![](../images/01_session/classification-chart-types.png)
+]
+
+.pull-right[
+- handling spreadsheat software
+- scatterplots, bar charts, histograms
+- visualisation best practises
+
+![](../images/01_session/hqdefault.jpg)
+
+]
+---
+## Visualisation
+
+### Second section
+
+.pull-left[
+- Visualisation of highdimensional data
+- Correspondence Analysis
+- Seriation
+
+![:width 75%](../images/01_session/battleshipcurves.jpg)
+]
+
+.pull-right[
+- preparing your data
+- conduct correspondence analysis
+- interpret the result
+
+![](../images/01_session/tosca.png)
+
+]
+---
+## Basic Statistics / Hypothese testing
+
+### What is it
+
+> A statistical hypothesis, sometimes called confirmatory data analysis, is a hypothesis that is testable on the basis of observing a process that is modeled via a set of random variables.[1] A statistical hypothesis test is a method of statistical inference. - wikipedia
+
+- decide between hypotheses using standardised (mathematical) tools
+- probability theory
+- scientific method
+
+.center[
+![](../images/01_session/inferential-statistical-analysis-300x180.jpg)
+![](../images/01_session/htest.jpeg)
+]
+
+---
+## Basic Statistics
+
+### Only section
+
+.pull-left[
+- Basics of hypothese testing
+- H_0_ and H_1_
+- statistical significance
+
+![:width 75%](../images/01_session/pysch-blog-stattest-poster.png)
+]
+
+.pull-right[
+- data preparation
+- Chi-Square Test
+- Interpretation
+
+![](../images/01_session/chi-squared-equation.png)
+
+]
+---
+## 14C Calibration
+
+### What is it
+
+.pull-left[
+![](../images/01_session/radiocarbon.png)
+]
+
+.pull-right[
+![](../images/01_session/calresult.png)
+]
+---
+## 14C Calibration
+
+### First section
+
+- understand the calibration process
+- being able to calibrate individual dates
+
+.center[
+![:width 40%](../images/01_session/calib_anim2-1.png)
+![:width 50%](../images/01_session/ss1.jpg)
+]
+
+---
+## 14C Calibration
+
+### Second section
+
+- translate stratigraphical sequences into OxCal models
+- doing sequential calibration
+
+.center[
+![:width 44%](../images/01_session/main-qimg-7ebf8c1d7e8e86cf9fde97fc151cce10.webp)
+![:width 25%](../images/01_session/images.png)
+![:width 24%](../images/01_session/Plot-of-modeled-dates-from-the-OxCal-program-ordered-from-oldest-to-youngest-dates-with.png)
+]
+
+---
+## GIS
+
+### What is it
+
+> A geographic information system (GIS) is a system designed to capture, store, manipulate, analyze, manage, and present spatial or geographic data. - Wikipedia
+
+.center[
+![:width 35%](../images/01_session/8269791489_a6bbd062a9_o.jpg)
+![:width 55%](../images/01_session/QGIS_2.2_Valmiera_showing_new_menu_design.png)
+]
+
+.right[
+![:width 40%](../images/01_session/QGIS_logo,_2017.svg.png)
+]
+
+---
+## GIS
+
+### First section
+
+- basically understand projection systems
+- being able to map geographical locations with background maps
+- digitizing/georeferencing maps
+
+![:width 30%](../images/01_session/projection_families.png)
+![:width 30%](../images/01_session/Bildschirmfoto-2016-07-27-um-15.40.44.png)
+![:width 30%](../images/01_session/c7238d563e7118867498e06d525739d5.jpg)
+
+---
+## GIS
+
+### Second section
+
+- thematic mapping
+- interpolation
+
+.center[
+![:width 33%](../images/01_session/DemoSnapshots_1b.png)
+![:width 42%](../images/01_session/2014.png)
+]
+
+---
+## Digital Documentation
+
+### What is it
+
+using electronic devices to
+
+- record informations in the field
+- measure and geolocalise finds
+- document features (eg. orthophoto)
+- make 3D models
+  - of terrain and architecture
+  - artefacts
+
+![:width 26%](../images/01_session/31021231223_e336cfc4bc_b.jpg)
+![:width 40%](../images/01_session/ls13-colorstripping_curvature_mapping.jpg)
+![:width 27%](../images/01_session/sfm.png)
+
+---
+## Digital Documentation
+
+### Only section
+
+- Overview about methods for digital documentation and recording
+- devices, software, techniques
+
+### To be continued next semester
+
+---
 
 ## Software in this course
 
@@ -86,9 +492,15 @@ knitr::kable(schedule)  %>%
 - most basic software
 
 .small[
+
+### Zotero
+
+- free and open source (FOSS) citation manager
+- integrates well in browser and Office Software
+
 ### Libre Office
 
-- free and open source (FOSS) office package
+- FOSS office package
 - most commands and procedures similar to 'the other' office package
 
 ### OxCal
@@ -96,67 +508,44 @@ knitr::kable(schedule)  %>%
 - free, but not open source
 - quasi standard in archaeology
 
-### Chronomodel
-
-- FOSS alternative to OxCal
-- (have to figure out if we can use it instead)
-
 ### QGIS
 
 - FOSS GIS package
 - General ideas and concepts are transferable to 'the other' GIS software
+
 ]
 
 ---
+## Prerequisite for successful participation
 
-## What is computational archaeology
+- a laptop (if you do not own one, we can provide you)
+- endurance
+- curiosity
+- installing some software
 
-### Topics<sup>*</sup>
+And in the end a test, consisting of a theoretical and a practical part
 
-1. The use of *digital data* in archaeological research.
-2. The general *use of computers* in archaeological research.
-3. The use of *computational algorithms to fill gaps in archaeological data* in ways that can’t be done with traditional techniques.
-4. *Data mining* and *multidimensional analyses* of archaeological data.
-5. The use of *simulation models and artificial intelligence* to understand the processes and dynamics of past societies.
-6. The use of *computer visualizations* to create immersive *virtual* experiences of archaeological sites and materials
+Test will be written after the semester.
 
-.footnote[[*] from http://isaacullah.github.io/What-is-Computational-Archaeology/]
 
 ---
+class: inverse, middle, center
+# Any questions?
 
-## What is computational archaeology
+.footnote[
+.right[
+.tiny[
+You might find the course material (including the presentations) at
 
-### Fields<sup>*</sup>
+https://github.com/MartinHinz/ca_hs_2019
 
-1. **GIS and geospatial data analysis.**
-2. **Digital imagery and photogrammetry.**
-3. **Statistical computing and quantitative analysis.**
-4. **Data visualization.**
-5. Agent Based Modeling and simulation.
-6. 3D modeling, virtual reality, and augmented reality.
-7. Video gaming and digital animation.
+You can see the rendered presentations at
 
-We will touch the **highlighted** subjects.
+http://martinhinz.github.io/ca_hs_2019
 
-.footnote[[*] from http://isaacullah.github.io/What-is-Computational-Archaeology/]
+You can contact me at
 
----
-
-## Organisations that are related to Computational Archaeology
-
-[Very subjective list]
-
-* [CAA](https://caa-international.org)
-* [ISAAK](https://isaakiel.github.io/)
-* [ACA](http://aca.archaeological.science/)
-
----
-
-## Other terms
-
-* Cyber Archaeology
-* Digital Archaeology
-* Archaeoinformatics
-* Digital Humanities
-
----
+<a href="mailto:martin.hinz@iaw.unibe.ch">martin.hinz@iaw.unibe.ch</a>
+]
+]
+]
