@@ -127,8 +127,8 @@ schedule <- c(
   "23/10/19", "Visualisation I", "Libre Office Calc",
   "30/10/19", "Visualisation II","Libre Office Calc, TOSCA",
   "06/11/19", "Basic Statistics / Hypothese testing", "Libre Office Calc",
-  "13/11/19", "14C Calibration I", "OxCal/Chronomodel",
-  "20/11/19", "14C Calibration II", "OxCal/Chronomodel",
+  "13/11/19", "14C Calibration I", "OxCal",
+  "20/11/19", "14C Calibration II", "OxCal",
   "27/11/19", "GIS I", "QGIS",
   "04/12/19", "GIS II", "QGIS",
   "11/12/19", "Digital Documentation", "Your Brain"
