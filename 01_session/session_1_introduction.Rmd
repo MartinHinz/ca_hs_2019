@@ -527,6 +527,13 @@ And in the end a test, consisting of a theoretical and a practical part
 
 Test will be written after the semester.
 
+---
+## ToDo till next meeting
+
+- Install Libre Office (https://de.libreoffice.org/)
+- Install Zotero (https://www.zotero.org/)
+
+- (optional) install Zotero Connector (https://www.zotero.org/download/connectors)
 
 ---
 class: inverse, middle, center
