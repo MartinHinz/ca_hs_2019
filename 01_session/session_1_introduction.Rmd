@@ -121,7 +121,7 @@ library(magrittr)
 library(kableExtra)
 schedule <- c(
   "18/09/19", "Introduction", "Your Brain",
-  "25/09/19", "Your Compute as research tools", "Libre Office Writer, Zotero",
+  "25/09/19", "Your Computer as research tool", "Libre Office Writer, Zotero",
   "02/10/19", "Data Bases I", "Libre Office Base",
   "09/10/19", "Data Bases II", "Libre Office Base",
   "23/10/19", "Visualisation I", "Libre Office Calc",
