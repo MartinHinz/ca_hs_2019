@@ -571,6 +571,19 @@ Registering for a free Zotero account is useful. It enables you to:
 - Zotero group "Montelius"
 
 ---
+## Today: Coffee Lecture
+
+### Literaturverwaltungsprogramme im Überblick
+(Dr. Denis Maier, UB Bern) 
+
+25.09.2019, 15:00 Uhr
+R. 170
+
+Literaturverwaltungsprogramme können alle Universitätsangehörigen bei ihren wissenschaftlichen Arbeiten helfen. Doch welches Programm eignet sich für wen? Diese Coffee-Lecture bietet einen Überblick zu gängigen Programmen und zeigt deren wichtigste Funktionen. Eine detailliertere Einführung in ausgewählte Literaturverwaltungsprogramme bieten Intensiv-Workshops der UB, die in der Coffee-Lecture vorgestellt werden.
+
+[Coffee Lecture Programme](https://www.unibe.ch/universitaet/dienstleistungen/universitaetsbibliothek/teilbibliotheken/philosophisch_historische_faecher/bibliothek_mittelstrasse/index_ger.html#pane777951)
+
+---
 class: inverse, middle, center
 # Any questions?
 
