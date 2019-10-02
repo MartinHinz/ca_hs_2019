@@ -59,7 +59,7 @@ cat(rmarkdown::metadata$date)
 
 .pull-right[
 ![:width 75%](../images/03_session/computer.jpg)
-.caption[source: https://www.ssa.gov]
+.caption[Source: https://www.ssa.gov]
 ]
 ---
 ## Database now
