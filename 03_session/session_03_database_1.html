@@ -134,8 +134,8 @@ Hierarchical data
 ]
 
 .pull-right[
-<div id="htmlwidget-972fd63bdc32bd93b421" style="width:400px;height:100px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-972fd63bdc32bd93b421">{"x":{"diagram":"\ndigraph models_diagram {\n    rankdir=\"LR\";\n    graph[overlap=false, splines=true]\n    \"site\" [shape=record, label=\"{\\\n      site|name :string\\l\\\n      lat :float\\l\\\n      lng :float\\l\\\n    }\"]\n    \n    \"artefact\" [shape=record, label=\"{artefact|\\\n      material :string\\l\\\n      weight :string\\l\\\n    }\"]\n    \n    \"found_at\" [shape=diamond, label=\"\n      found_at\\l\\\n      date :datetime\n    \"]\n    \n\n    \"site\" -> \"found_at\" [label=\"1\"]\n    \"found_at\" -> \"artefact\" [label=\"N\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0025ac4ee50134d76b28" style="width:400px;height:100px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0025ac4ee50134d76b28">{"x":{"diagram":"\ndigraph models_diagram {\n    rankdir=\"LR\";\n    graph[overlap=false, splines=true]\n    \"site\" [shape=record, label=\"{\\\n      site|name :string\\l\\\n      lat :float\\l\\\n      lng :float\\l\\\n    }\"]\n    \n    \"artefact\" [shape=record, label=\"{artefact|\\\n      material :string\\l\\\n      weight :string\\l\\\n    }\"]\n    \n    \"found_at\" [shape=diamond, label=\"\n      found_at\\l\\\n      date :datetime\n    \"]\n    \n\n    \"site\" -> \"found_at\" [label=\"1\"]\n    \"found_at\" -> \"artefact\" [label=\"N\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 ]
 
 .footnote[.tiny[&lt;sup&gt;\*&lt;/sup&gt;**Entity Set:**  A collection of similar entities.  E.g., all employees.
