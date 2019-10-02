@@ -4,7 +4,7 @@ subtitle: "03 - Database 1"
 author: "Martin Hinz"
 institute: "Institut für Archäologische Wissenschaften, Universität Bern"
 fontsize: 9pt
-date: "25/09/19"
+date: "01/10/19"
 output:
   xaringan::moon_reader:
     chakra: "../libs/remark-latest.min.js"
