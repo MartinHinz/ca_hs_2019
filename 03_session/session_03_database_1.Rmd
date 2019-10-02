@@ -92,7 +92,7 @@ cat(rmarkdown::metadata$date)
 - A (typically very large) integrated collection of data.
 - Typically models a real-world situation:
   - Entities (e.g., teams, games)
-  - Relationships (e.g. The A’s are playing in the World Series)
+  - Relationships (e.g. YB is playing in the Champions League)
 - Computerised database systems are now very commonplace
 - Information is stored in a database every time we: 
   - use a bank account
