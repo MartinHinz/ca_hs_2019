@@ -104,7 +104,7 @@ my_dia
 ---
 ## Types of Relationships
 
-### 1:1, 1:m, n:m
+### 1:1, 1:n, n:m
 
 .pull-left[
 #### Examples
@@ -113,7 +113,7 @@ my_dia
   - the sherds of one pot can be found at 1:n features
   - a feature can contain 1:n potsherds
   
-- sample and measurements (1:m)
+- sample and measurements (1:n)
   - 1 sample has 1:n measurements
   
 - artefact and find lable (1:1)
@@ -193,6 +193,8 @@ The identifier of another record in relation to this one is the **foreign key**.
 
 > **Database normalization** is the process of structuring a relational database in accordance with a series of so-called normal forms in order **to reduce data redundancy** and **improve data integrity**. -- wikipedia
 
+.small[
+
 ### 1NF
 To satisfy 1NF, the values in each column of a table must be **atomic**. (Meaning one information at the time)
 
@@ -205,6 +207,7 @@ It does not have any non-prime attribute that is functionally dependent on any p
 
 ### 3NF
 No data in a record should automatically follow from other data in the same record.
+]
 
 ---
 ## That's enought
@@ -238,6 +241,17 @@ How can we transform that into tables (this usually comes naturally than)?
 ]
 ---
 ## Structure MiscoviceDB
+
+### Draft
+
+.center[
+![:width 70%](../images/04_session/db_draft.jpg)
+]
+
+---
+## Structure MiscoviceDB
+
+### ER-Diagramm
 
 ```{r echo=FALSE, message=F}
 library(DiagrammeR)
@@ -278,10 +292,10 @@ digraph models_diagram {
       std :integer\\l\\
     }']
 
-    'sites' -> 'graves' [label='1:m']
-    'graves' -> 'artefacts' [label='1:m']
-    'graves' -> 'individuals' [label='1:m']
-    'graves' -> 'c14_dates' [label='1:m']
+    'sites' -> 'graves' [label='1:n']
+    'graves' -> 'artefacts' [label='1:n']
+    'graves' -> 'individuals' [label='1:n']
+    'graves' -> 'c14_dates' [label='1:n']
     
 }", height=400, width=800)
 
@@ -340,10 +354,10 @@ digraph models_diagram {
       std :integer\\l\\
     }']
 
-    'sites' -> 'graves' [label='1:m']
-    'graves' -> 'artefacts' [label='1:m']
-    'graves' -> 'individuals' [label='1:m']
-    'graves' -> 'c14_dates' [label='1:m']
+    'sites' -> 'graves' [label='1:n']
+    'graves' -> 'artefacts' [label='1:n']
+    'graves' -> 'individuals' [label='1:n']
+    'graves' -> 'c14_dates' [label='1:n']
     
 }", height=400, width=800)
 
@@ -417,13 +431,13 @@ digraph models_diagram {
       std :integer\\l\\
     }']
 
-    'sites' -> 'graves' [label='1:m']
-    'graves' -> 'artefacts' [label='1:m']
-    'graves' -> 'individuals' [label='1:m']
-    'graves' -> 'c14_dates' [label='1:m']
-    'types' -> 'artefacts' [label='1:m']
-    'materials' -> 'artefacts' [label='1:m']
-    'sexes' -> 'individuals' [label='1:m']
+    'sites' -> 'graves' [label='1:n']
+    'graves' -> 'artefacts' [label='1:n']
+    'graves' -> 'individuals' [label='1:n']
+    'graves' -> 'c14_dates' [label='1:n']
+    'types' -> 'artefacts' [label='1:n']
+    'materials' -> 'artefacts' [label='1:n']
+    'sexes' -> 'individuals' [label='1:n']
     
 }", height=400, width=800)
 
