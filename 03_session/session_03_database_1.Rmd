@@ -4,7 +4,7 @@ subtitle: "03 - Database 1"
 author: "Martin Hinz"
 institute: "Institut für Archäologische Wissenschaften, Universität Bern"
 fontsize: 9pt
-date: "25/09/19"
+date: "02/10/19"
 output:
   xaringan::moon_reader:
     chakra: "../libs/remark-latest.min.js"
@@ -59,7 +59,7 @@ cat(rmarkdown::metadata$date)
 
 .pull-right[
 ![:width 75%](../images/03_session/computer.jpg)
-.caption[source: https://www.ssa.gov]
+.caption[Source: https://www.ssa.gov]
 ]
 ---
 ## Database now
@@ -92,7 +92,7 @@ cat(rmarkdown::metadata$date)
 - A (typically very large) integrated collection of data.
 - Typically models a real-world situation:
   - Entities (e.g., teams, games)
-  - Relationships (e.g. The A’s are playing in the World Series)
+  - Relationships (e.g. YB is playing in the Champions League)
 - Computerised database systems are now very commonplace
 - Information is stored in a database every time we: 
   - use a bank account
