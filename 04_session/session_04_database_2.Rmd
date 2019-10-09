@@ -275,9 +275,9 @@ digraph models_diagram {
     
     'individuals' [shape=record, label='{individuals|\\
       sex :string\\l\\
-      age :float\\l\\
+      age :string\\l\\
       orientation :float\\l\\
-      completness :float\\l\\
+      completeness :float\\l\\
     }']
     
     'artefacts' [shape=record, label='{artefacts|\\
@@ -333,9 +333,9 @@ digraph models_diagram {
       id :integer\\l\\
       grave_id :integer\\l\\
       sex :string\\l\\
-      age :float\\l\\
+      age :string\\l\\
       orientation :float\\l\\
-      completness :float\\l\\
+      completeness :float\\l\\
     }']
     
     'artefacts' [shape=record, label='{artefacts|\\
@@ -395,9 +395,9 @@ digraph models_diagram {
       id :integer\\l\\
       grave_id :integer\\l\\
       sex_id :integer\\l\\
-      age :float\\l\\
+      age_id :integer\\l\\
       orientation :float\\l\\
-      completness :float\\l\\
+      completeness :float\\l\\
     }']
     
     'sexes' [shape=record, label='{sexes|\\
@@ -423,6 +423,11 @@ digraph models_diagram {
       name :string\\l\\
     }']
     
+    'ages' [shape=record, label='{ages|\\
+      id :integer\\l\\
+      name :string\\l\\
+    }']
+    
     'c14_dates' [shape=record, label='{c14_dates|\\
       id :integer\\l\\
       grave_id :integer\\l\\
@@ -438,6 +443,7 @@ digraph models_diagram {
     'types' -> 'artefacts' [label='1:n']
     'materials' -> 'artefacts' [label='1:n']
     'sexes' -> 'individuals' [label='1:n']
+    'ages' -> 'individuals' [label='1:n']
     
 }", height=400, width=800)
 
