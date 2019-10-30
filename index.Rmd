@@ -50,7 +50,7 @@ cat(rmarkdown::metadata$date)
 - [03\. Session: Data Bases I](03_session/session_03_database_1.html) | 02/10/19
 - [04\. Session: Data Bases II](04_session/session_04_database_2.html) | 09/10/19
 - 05\. Session: Visualisation I | 23/10/19
-- 06\. Session: Visualisation II | 30/10/19
+- [06\. Session: Visualisation II](06_session/session_06.html) | 30/10/19
 - 07\. Session: Basic Statistics | 06/11/19
 - 08\. Session: 14C Calibration I | 13/11/19
 - 09\. Session: 14C Calibration II | 20/11/19
