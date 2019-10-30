@@ -113,6 +113,13 @@ Necessary:
 
 ### Repeat until no further step necessary
 
+<hr>
+
+## Commands in LibreOffice Calc (and Excel)
+
+- COUNT (ANZAHL)
+- COUNTIF (ZÄHLENWENN)
+
 ---
 
 ## Reciprocal Averaging: idea and basics
