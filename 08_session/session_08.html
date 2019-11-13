@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Computational Archaeology</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Martin Hinz" />
+    <meta name="date" content="2019-06-11" />
+    <link rel="stylesheet" href="../libs/default.css" type="text/css" />
+    <link rel="stylesheet" href="../libs/default-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="../libs/customize.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, middle
+
+
+#  Computational Archaeology
+
+##  08 - GIS I
+
+###  Martin Hinz
+
+####  Institut für Archäologische Wissenschaften, Universität Bern
+
+06/11/19
+---
+## GIS [1]
+
+.pull-left[
+
+&gt; A geographic information system (GIS) is a system designed to capture, store, manipulate, analyze, manage, and present spatial or geographic data. - Wikipedia
+
+]
+
+.pull-right[
+![](../images/01_session/8269791489_a6bbd062a9_o.jpg)
+]
+---
+## GIS [2]
+
+![](../images/08_session/gis_overview.jpg)
+---
+## What can we do with a GIS?
+
+![](../images/08_session/gis_functions.png)
+---
+## QGIS
+
+- a free and open source GIS software
+- https://www.qgis.org/
+- If you not have already installed QGIS, please do now!
+
+.center[
+![:width 55%](../images/01_session/QGIS_2.2_Valmiera_showing_new_menu_design.png)
+]
+
+.right[
+![:width 40%](../images/01_session/QGIS_logo,_2017.svg.png)
+]
+
+---
+## Raster vs. Vector
+
+.pull-left[
+![](../images/08_session/raster_vs_vector.png)
+]
+.pull-right[
+![](../images/08_session/raster_vs_vector2.png)
+]
+
+---
+## Lat/long system
+
+.pull-left[
+Lat/long system measures angles on spherical surfaces
+
+* 60º east of PM
+* 55º north of equator
+
+* Lat/long values are NOT Cartesian (X, Y) coordinates
+* constant angular deviations do not have constant distance deviations
+* 1° of longitude at the equator ≠ 1° of longitude near the poles
+]
+
+.pull-right[
+![](../images/08_session/lat_lng_earth.png)
+]
+
+---
+## Coordinate Systems
+
+.pull-left[
+- Features on spherical surfaces are not easy to measure
+- Features on planes are easy to measure and calculate
+  - distance
+  - angle
+  - area
+- Coordinate systems provide a measurement framework
+]
+
+.pull-right[
+![](../images/08_session/lat_lng_earth.png)
+]
+
+---
+## Coordinate Systems and Projection [1]
+
+.pull-left[
+![](../images/08_session/earth.jpg)
+]
+.pull-right[
+![:width 70%](../images/08_session/earth-cut.jpg)
+]
+
+---
+## Coordinate Systems and Projection [2]
+
+.pull-left[
+- an imaginary light is “projected” onto a “developable surface” 
+- a variety of different projection models exist
+- Map projections always introduce error and distortion
+]
+
+.pull-right[
+![](../images/01_session/projection_families.png)
+]
+
+---
+## UTM
+
+.pull-left[
+Universal Transverse Mercator (UTM)
+
+- Based on the Transverse Mercator projection
+- 60 zones (each 6° wide)
+- false eastings
+- Y-0 set at south pole or equator
+]
+
+.pull-right[
+![](../images/08_session/utm_world.png)
+]
+
+---
+## Schweizer Landeskoordinaten
+
+.pull-left[
+- a geographic coordinate system used in Switzerland for maps and surveying by the Swiss Federal Office of Topography (Swisstopo)
+- The map projection used is Oblique Mercator on an 1841 Bessel ellipsoid.
+- All coordinates are always positive, since Switzerland is located in the 1st quadrant of the coordinate system.
+]
+
+.pull-right[
+![](../images/08_session/STP_BezugsrahmenLV95.png)
+]
+---
+## Datums and Ellipsoids
+
+.pull-left[
+- The earth is essentially a potatoe...
+- Ellipsoids are geometric estimations of the shape of the earth with more or less accurary
+- a datum is a system that allows us to place a coordinate system on the earth’s surface based on a specific ellipsoid
+- examples:
+  - WGS84 (Lat/Lng, UTM)
+  - Bessel 1841 (Schweizer Landeskoordinaten)
+]
+
+.pull-right[
+![](../images/08_session/ellipsoids.png)
+]
+
+---
+## Georeferencing
+
+![:width 40%](miskovice_overview.png)
+![:width 40%](miskovice_overview_modified.png)
+
+Download original file: [miskovice_overview.png](miskovice_overview.png)
+
+Background openstreetmap: https://tile.openstreetmap.org/{z}/{x}/{y}.png
+
+coordinate system wgs84/pseudo-mercator (EPSG: 3857)
+---
+## Digitising
+
+download the georeferenced files:
+
+- [miskovice_overview_modified.tif](miskovice_overview_modified.tif)
+- [miskovice_a-d_modified.tif](miskovice_a-d_modified.tif)
+- [miskovice_e_modified.tif](miskovice_e_modified.tif)
+- [miskovice_f_modified.tif](miskovice_f_modified.tif)
+
+Make a new shape layer (points)
+
+Start digitising and save layer
+
+---
+## Changing design
+
+load shape file(s):
+- [miskovice_graves_shp.zip](miskovice_graves_shp.zip)
+- extract
+- Layer &gt; Add Layer &gt; Add Vector Layer
+
+right click on layer &gt; Properties &gt; Symbology
+
+---
+## Heatmap
+
+right click on layer &gt; Properties &gt; Symbology &gt; Heatmap
+
+---
+## Exporting
+
+right click on layer &gt; Export &gt; Save features as...
+
+- shp
+- csv
+  - geometry ('AS_XY')
+
+---
+## Importing
+
+Layer &gt; Add Layer &gt; Add Delimited Text Layer
+
+---
+class: inverse, middle, center
+# Any questions?
+
+.footnote[
+.right[
+.tiny[
+You might find the course material (including the presentations) at
+
+https://github.com/MartinHinz/ca_hs_2019
+
+You can see the rendered presentations at
+
+http://martinhinz.github.io/ca_hs_2019
+
+You can contact me at
+
+&lt;a href="mailto:martin.hinz@iaw.unibe.ch"&gt;martin.hinz@iaw.unibe.ch&lt;/a&gt;
+
+Sources for the slides:
+
+* Steiniger 2009, Free and Open Source Desktop GIS Projects and Software
+* Briggs 2019, GIS Fundamentals
+* Leeds, Raster GIS
+* Lawler/Schiess 2010, Projections and Coordinate Systems
+]
+]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="../libs/remark-latest.min.js"></script>
+<script src="../libs/macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"fig_caption": true,
+"ratio": "16:10"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
