@@ -17,7 +17,7 @@ class: title-slide, center, middle
 
 #  Computational Archaeology
 
-##  08 - GIS I
+##  08 - GIS I &amp; II
 
 ###  Martin Hinz
 
@@ -211,6 +211,22 @@ right click on layer &gt; Properties &gt; Symbology
 right click on layer &gt; Properties &gt; Symbology &gt; Heatmap
 
 ---
+## Thematic map (1:1 Relationship)
+
+- import csv-file (add Delimited Text layer)
+- join attribute table with geolocations
+- visualise (via symbology)
+
+---
+## Thematic map (1:m Relationship)
+
+- import csv-file
+- create virtual layer
+- sql join 
+  - `select * from miskovice_graves left join miskovice_types_per_graves on miskovice_graves.id == miskovice_types_per_graves.grave_number`
+- visualise (via symbology)
+
+---
 ## Exporting
 
 right click on layer &gt; Export &gt; Save features as...
@@ -223,6 +239,17 @@ right click on layer &gt; Export &gt; Save features as...
 ## Importing
 
 Layer &gt; Add Layer &gt; Add Delimited Text Layer
+
+---
+## Exporting maps
+
+Project &gt; New print Layout
+
+- add map
+- add north arrow
+- add scalebar
+- export as Image
+- export as PDF
 
 ---
 class: inverse, middle, center

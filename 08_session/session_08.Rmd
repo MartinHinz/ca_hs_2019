@@ -1,6 +1,6 @@
 ---
 title: "Computational Archaeology"
-subtitle: "08 - GIS I"
+subtitle: "08 - GIS I & II"
 author: "Martin Hinz"
 institute: "Institut für Archäologische Wissenschaften, Universität Bern"
 fontsize: 9pt
@@ -237,6 +237,22 @@ right click on layer > Properties > Symbology
 right click on layer > Properties > Symbology > Heatmap
 
 ---
+## Thematic map (1:1 Relationship)
+
+- import csv-file (add Delimited Text layer)
+- join attribute table with geolocations
+- visualise (via symbology)
+
+---
+## Thematic map (1:m Relationship)
+
+- import csv-file
+- create virtual layer
+- sql join 
+  - `select * from miskovice_graves left join miskovice_types_per_graves on miskovice_graves.id == miskovice_types_per_graves.grave_number`
+- visualise (via symbology)
+
+---
 ## Exporting
 
 right click on layer > Export > Save features as...
@@ -249,6 +265,17 @@ right click on layer > Export > Save features as...
 ## Importing
 
 Layer > Add Layer > Add Delimited Text Layer
+
+---
+## Exporting maps
+
+Project > New print Layout
+
+- add map
+- add north arrow
+- add scalebar
+- export as Image
+- export as PDF
 
 ---
 class: inverse, middle, center
