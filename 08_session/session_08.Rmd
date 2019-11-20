@@ -239,14 +239,14 @@ right click on layer > Properties > Symbology > Heatmap
 ---
 ## Thematic map (1:1 Relationship)
 
-- import csv-file (add Delimited Text layer)
+- import csv-file (add Delimited Text layer) [miskovice_graves_data.csv](miskovice_graves_data.csv)
 - join attribute table with geolocations
 - visualise (via symbology)
 
 ---
 ## Thematic map (1:m Relationship)
 
-- import csv-file
+- import csv-file (add Delimited Text layer) [miskovice_types_per_graves.csv](miskovice_types_per_graves.csv)
 - create virtual layer
 - sql join 
   - `select * from miskovice_graves left join miskovice_types_per_graves on miskovice_graves.id == miskovice_types_per_graves.grave_number`
