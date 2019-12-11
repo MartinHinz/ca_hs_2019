@@ -56,7 +56,7 @@ cat(rmarkdown::metadata$date)
 - [09\. Session: GIS II](08_session/session_08.html) | 20/11/19
 - [10\. Session: 14C Calibration I](09_session/session_09.html) | 27/11/19
 - [11\. Session: 14C Calibration II](11_session/session_11.html) | 04/12/19
-- 12\. Session: Digital Documentation | 11/12/19
+- [12\. Session: Digital Documentation](12_session/session_12.html) | 11/12/19
 ]
 
 .tiny[
