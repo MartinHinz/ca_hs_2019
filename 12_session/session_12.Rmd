@@ -1,10 +1,10 @@
 ---
 title: "Computational Archaeology"
-subtitle: "14C Calibration II"
+subtitle: "Digital Documentation"
 author: "Martin Hinz"
 institute: "Institut für Archäologische Wissenschaften, Universität Bern"
 fontsize: 9pt
-date: "04/12/19"
+date: "11/12/19"
 output:
   xaringan::moon_reader:
     chakra: "../libs/remark-latest.min.js"
